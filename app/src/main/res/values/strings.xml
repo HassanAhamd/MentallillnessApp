@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mental illness empowerment</string>
+    <string name="app_name">Mental_illness_empowerment</string>
     <string name="login_email_hint">Email</string>
     <string name="login_password_hint">Password</string>
     <string name="notification">Notification\n</string>
