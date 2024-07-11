@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottomBar"
+        android:layout_alignParentTop="true"/>
+
+
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:menu="@menu/menu_bottom"
+        app:backgroundColor="@color/primaryColor"
+        app:indicatorColor="@color/white"
+        app:indicatorRadius="@dimen/_20sdp"
+        app:cornerRadius="@dimen/_2sdp"
+        app:textColor="@color/white"
+        app:itemFontFamily="@font/acme_regular"
+        app:textSize="@dimen/_12sdp"
+        app:iconSize="@dimen/_30sdp"
+        app:iconTint="@color/white"
+        app:iconTintActive="@color/secoundaryColor"
+        app:iconMargin="@dimen/_30sdp"
+        app:duration="@integer/material_motion_duration_short_2" />
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/svLoading"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/secoundaryColor" />
+
+</RelativeLayout>

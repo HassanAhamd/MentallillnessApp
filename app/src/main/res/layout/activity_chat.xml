@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ChatActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/primaryColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_centerVertical="true"
+            android:id="@+id/ivBack"
+            android:background="@drawable/ic_back"
+            android:backgroundTint="@color/white"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"/>
+
+        <TextView
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivBack"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="@font/acme_regular"
+            android:text="Mental illness AI Assistant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/white"
+            android:src="@drawable/logo"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/rlHeader" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputMessage"
+            style="@style/parent"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_weight="1"
+            app:boxStrokeColor="@color/secoundaryColor">
+
+            <EditText
+                android:id="@+id/editTextMessage"
+                style="@style/modifiedEditText"
+                android:hint="Type message here"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@color/secoundaryColor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/bg_btn"
+            android:backgroundTint="@color/secoundaryColor"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:background="@drawable/ic_send"
+                android:backgroundTint="@color/white"
+                android:padding="@dimen/_5sdp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:visibility="gone"
+        android:id="@+id/svLoading"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/secoundaryColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rvMessages"
+        app:layout_constraintStart_toStartOf="@+id/rvMessages"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:background="@color/cardview_light_background">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp">
+
+        <androidx.cardview.widget.CardView
+            android:background="@color/white"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:padding="@dimen/_10sdp"
+                android:id="@+id/rlChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/ivLogo"
+                    android:background="@drawable/logo"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"/>
+                <TextView
+                    android:textColor="@color/secoundaryColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/acme_regular"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/ivLogo"
+                    android:text="AI Chat Assistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:background="@color/white"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:padding="@dimen/_10sdp"
+                android:id="@+id/rlDoctors"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/ivDocs"
+                    android:background="@drawable/download"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"/>
+                <TextView
+                    android:textColor="@color/secoundaryColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/acme_regular"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/ivDocs"
+                    android:text="Find a Specialist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_below="@+id/topLayout"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp">
+
+        <androidx.cardview.widget.CardView
+            android:background="@color/white"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:padding="@dimen/_10sdp"
+                android:background="@color/white"
+                android:id="@+id/rlExcercise"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/ivExcercise"
+                    android:background="@drawable/logo"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"/>
+                <TextView
+                    android:textColor="@color/secoundaryColor"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/acme_regular"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/ivExcercise"
+                    android:text="Best Exercise Videos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

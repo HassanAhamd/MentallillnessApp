@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MentallIllnessEmpowerment" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/secoundaryColor</item>
+    </style>
+
+    <style name="Theme.MentallIllnessEmpowerment" parent="Base.Theme.MentallIllnessEmpowerment" />
+</resources>

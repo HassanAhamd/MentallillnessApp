@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "289061763274",
+    "project_id": "mental-illness-empowerment",
+    "storage_bucket": "mental-illness-empowerment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289061763274:android:5be7157333d0cc5d77dc33",
+        "android_client_info": {
+          "package_name": "com.superior.mentallillness"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ5pQKRRCam8zoXMdbsziK1jZPRXHPW4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

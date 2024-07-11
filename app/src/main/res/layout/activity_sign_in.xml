@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:layout_gravity="center">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/acme_regular"
+                    android:text="Already \nhave an \nAccount?" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_register_hero"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
+                app:boxStrokeColor="@color/secoundaryColor"
+                style="@style/parent">
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    style="@style/modifiedEditText"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@color/secoundaryColor"
+                    android:hint="@string/login_email_hint"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                app:boxStrokeColor="@color/secoundaryColor"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/secoundaryColor"
+                style="@style/parent">
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/login_password_hint"
+                    android:maxLines="1"
+                    android:textColor="@color/secoundaryColor"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvForgetPass"
+                style="@style/viewParent"
+                android:text="Forgot Password?"
+                android:fontFamily="@font/acme_regular"
+                android:textColor="@color/secoundaryColor"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlLogin"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp">
+                <TextView
+                    android:fontFamily="@font/acme_regular"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
+                    android:text="Login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvNewUser"
+                style="@style/parent"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/secoundaryColor"
+                android:textSize="17sp"
+                android:fontFamily="@font/acme_regular"
+                android:text="New user? Register Now"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:onClick="onLoginClick"/>
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:weightSum="12"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="30dp">-->
+
+<!--                <View-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="@color/colorPrimaryDark"-->
+<!--                    android:layout_weight="3"/>-->
+
+<!--                <TextView-->
+<!--                    style="@style/viewParent.headerText.NoMode"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Use other Methods"-->
+<!--                    android:layout_weight="6"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textAlignment="center"/>-->
+
+<!--                <View-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="@color/colorPrimaryDark"-->
+<!--                    android:layout_weight="3"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="20dp">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_facebook"/>-->
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:src="@drawable/ic_google_plus"-->
+<!--                    android:layout_marginLeft="10dp"/>-->
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+    <View
+        android:id="@+id/moveView"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="11dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_side_bg"/>
+    <ImageView
+        android:id="@+id/movePlus"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_img"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="onLoginClick"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/svLoading"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/secoundaryColor" />
+</RelativeLayout>

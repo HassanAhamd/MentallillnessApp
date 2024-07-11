@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardImage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/selectImage"
+    android:layout_margin="@dimen/_8sdp"
+    android:visibility="visible"
+    app:cardCornerRadius="@dimen/_6sdp"
+    app:cardElevation="@dimen/_6sdp"
+    app:cardUseCompatPadding="true"
+    app:elevation="@dimen/_12sdp">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/toast_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/_12sdp">
+
+        <ImageView
+            android:id="@+id/imageToast"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_bell_alert"/>
+
+        <TextView
+            android:id="@+id/titleToast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imageToast"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/_6sdp"
+            android:text="@string/notification"
+            android:fontFamily="@font/acme_regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="NestedWeights" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+

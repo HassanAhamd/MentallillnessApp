@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/secoundaryColor</item>
+        <item name="colorAccent">@color/thirdcolor</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
+
+    <!--styles for app-->
+    <!--df dialog-->
+
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="viewParent.headerText">
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="viewParent.headerText.NoMode">
+        <item name="android:textColor">@color/secoundaryColor</item>
+    </style>
+
+
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/secoundaryColor</item>
+        <item name="boxStrokeColor">@color/secoundaryColor</item>
+    </style>
+
+
+
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="colorPrimary">@color/secoundaryColor</item>
+    </style>
+    <style name="ErrorText" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        <item name="errorTextAppearance">@style/ErrorText</item>
+    </style>
+
+    <style name="modifiedEditText" parent="parent">
+        <item name="android:backgroundTint">@color/secoundaryColor</item>
+    </style>
+
+    <style name="loginButton" parent="viewParent">
+        <item name="android:background">@drawable/button_background_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="spinnerHintText" parent="parent">
+        <item name="android:textColor">@color/thirdcolor</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+</resources>
